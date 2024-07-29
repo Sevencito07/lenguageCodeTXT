@@ -1,0 +1,2268 @@
+// Example 1: Declaring and Initializing an Immutable Variable
+fun main() {
+    val name: String = "Alice" // Immutable variable
+    val age: Int = 25
+    println("Name: $name, Age: $age")
+}
+// Demonstrates declaring and initializing an immutable variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Declaring and Initializing a Mutable Variable
+fun main() {
+    var count: Int = 10 // Mutable variable
+    println("Initial count: $count")
+    count += 5
+    println("Updated count: $count")
+}
+// Demonstrates declaring and modifying a mutable variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Type Inference
+fun main() {
+    val city = "Paris" // Type is inferred as String
+    var temperature = 25 // Type is inferred as Int
+    println("City: $city, Temperature: $temperature")
+    temperature = 30
+    println("Updated Temperature: $temperature")
+}
+// Demonstrates type inference in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Using String Templates
+fun main() {
+    val firstName = "John"
+    val lastName = "Doe"
+    val fullName = "$firstName $lastName"
+    println("Full name: $fullName")
+}
+// Demonstrates string templates in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Raw String
+fun main() {
+    val text = """
+        |Hello,
+        |World!
+        |Welcome to Kotlin.
+    """.trimMargin()
+    println(text)
+}
+// Demonstrates a raw string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Nullable Variable
+fun main() {
+    var name: String? = "Alice"
+    println("Name: $name")
+    name = null
+    println("Name: $name")
+}
+// Demonstrates a nullable variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Elvis Operator
+fun main() {
+    var name: String? = null
+    val displayName = name ?: "Unknown"
+    println("Name: $displayName")
+}
+// Demonstrates the Elvis operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Safe Call Operator
+fun main() {
+    var name: String? = "Alice"
+    println("Name length: ${name?.length}")
+    name = null
+    println("Name length: ${name?.length}")
+}
+// Demonstrates the safe call operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Non-Null Assertion Operator
+fun main() {
+    var name: String? = "Alice"
+    println("Name length: ${name!!.length}")
+}
+// Demonstrates the non-null assertion operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Constant Variable
+const val PI = 3.14159
+
+fun main() {
+    println("Value of PI: $PI")
+}
+// Demonstrates a constant variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 11: Array Variable
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    println("First number: ${numbers[0]}")
+    println("All numbers: ${numbers.joinToString()}")
+}
+// Demonstrates an array variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 12: List Variable
+fun main() {
+    val fruits = listOf("Apple", "Banana", "Cherry")
+    println("First fruit: ${fruits[0]}")
+    println("All fruits: ${fruits.joinToString()}")
+}
+// Demonstrates a list variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 13: Mutable List Variable
+fun main() {
+    val fruits = mutableListOf("Apple", "Banana")
+    fruits.add("Cherry")
+    println("All fruits: ${fruits.joinToString()}")
+}
+// Demonstrates a mutable list variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 14: Map Variable
+fun main() {
+    val map = mapOf("name" to "Alice", "age" to 25)
+    println("Name: ${map["name"]}, Age: ${map["age"]}")
+}
+// Demonstrates a map variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 15: Mutable Map Variable
+fun main() {
+    val map = mutableMapOf("name" to "Alice")
+    map["age"] = 25
+    println("Name: ${map["name"]}, Age: ${map["age"]}")
+}
+// Demonstrates a mutable map variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 16: Using 'let' with Nullable Variable
+fun main() {
+    var name: String? = "Alice"
+    name?.let {
+        println("Name: $it")
+    }
+    name = null
+    name?.let {
+        println("Name: $it")
+    }
+}
+// Demonstrates using 'let' with a nullable variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 17: Declaring and Initializing Multiple Variables
+fun main() {
+    val (firstName, lastName, age) = listOf("John", "Doe", 30)
+    println("First Name: $firstName, Last Name: $lastName, Age: $age")
+}
+// Demonstrates declaring and initializing multiple variables in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 18: Using Range with Variables
+fun main() {
+    val range = 1..5
+    for (i in range) {
+        println("Value: $i")
+    }
+}
+// Demonstrates using a range with variables in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 19: Using 'when' with Variables
+fun main() {
+    val day = 3
+    val dayName = when (day) {
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        5 -> "Friday"
+        6 -> "Saturday"
+        7 -> "Sunday"
+        else -> "Invalid day"
+    }
+    println("Day: $dayName")
+}
+// Demonstrates using 'when' with variables in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 20: Using Variables in Functions
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val result = sum(3, 4)
+    println("Sum: $result")
+}
+
+
+// Demonstrates using variables in functions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kotlin Data Types: Syntax
+/////////////////////////////////////////////////////////////////////
+
+
+// Example 1: Integer Data Type
+fun main() {
+    val age: Int = 25 // Integer data type
+    println("Age: $age")
+}
+// Demonstrates the use of integer data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Float Data Type
+fun main() {
+    val pi: Float = 3.14f // Float data type
+    println("Pi: $pi")
+}
+// Demonstrates the use of float data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Double Data Type
+fun main() {
+    val largeNumber: Double = 123456789.123456789 // Double data type
+    println("Large number: $largeNumber")
+}
+// Demonstrates the use of double data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Character Data Type
+fun main() {
+    val grade: Char = 'A' // Character data type
+    println("Grade: $grade")
+}
+// Demonstrates the use of character data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: String Data Type
+fun main() {
+    val greeting: String = "Hello, World!" // String data type
+    println(greeting)
+}
+// Demonstrates the use of string data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Boolean Data Type
+fun main() {
+    val isProgrammingFun: Boolean = true // Boolean data type
+    println("Is programming fun? $isProgrammingFun")
+}
+// Demonstrates the use of boolean data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Byte Data Type
+fun main() {
+    val smallNumber: Byte = 127 // Byte data type
+    println("Small number: $smallNumber")
+}
+// Demonstrates the use of byte data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Short Data Type
+fun main() {
+    val shortNumber: Short = 32000 // Short data type
+    println("Short number: $shortNumber")
+}
+// Demonstrates the use of short data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Long Data Type
+fun main() {
+    val largeNumber: Long = 1234567890123456789 // Long data type
+    println("Large number: $largeNumber")
+}
+// Demonstrates the use of long data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Array Data Type
+fun main() {
+    val numbers: Array<Int> = arrayOf(1, 2, 3, 4, 5) // Array data type
+    println("Numbers: ${numbers.joinToString()}")
+}
+// Demonstrates the use of array data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 11: List Data Type
+fun main() {
+    val fruits: List<String> = listOf("Apple", "Banana", "Cherry") // List data type
+    println("Fruits: ${fruits.joinToString()}")
+}
+// Demonstrates the use of list data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 12: Mutable List Data Type
+fun main() {
+    val fruits: MutableList<String> = mutableListOf("Apple", "Banana") // Mutable list data type
+    fruits.add("Cherry")
+    println("Fruits: ${fruits.joinToString()}")
+}
+// Demonstrates the use of mutable list data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 13: Set Data Type
+fun main() {
+    val uniqueNumbers: Set<Int> = setOf(1, 2, 3, 3, 4) // Set data type
+    println("Unique numbers: ${uniqueNumbers.joinToString()}")
+}
+// Demonstrates the use of set data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 14: Mutable Set Data Type
+fun main() {
+    val uniqueNumbers: MutableSet<Int> = mutableSetOf(1, 2, 3) // Mutable set data type
+    uniqueNumbers.add(4)
+    uniqueNumbers.add(4)
+    println("Unique numbers: ${uniqueNumbers.joinToString()}")
+}
+// Demonstrates the use of mutable set data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 15: Map Data Type
+fun main() {
+    val user: Map<String, Any> = mapOf("name" to "Alice", "age" to 25) // Map data type
+    println("User: $user")
+}
+// Demonstrates the use of map data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 16: Mutable Map Data Type
+fun main() {
+    val user: MutableMap<String, Any> = mutableMapOf("name" to "Alice") // Mutable map data type
+    user["age"] = 25
+    println("User: $user")
+}
+// Demonstrates the use of mutable map data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 17: Pair Data Type
+fun main() {
+    val pair: Pair<String, Int> = Pair("Alice", 25) // Pair data type
+    println("Pair: ${pair.first}, ${pair.second}")
+}
+// Demonstrates the use of pair data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 18: Triple Data Type
+fun main() {
+    val triple: Triple<String, Int, Boolean> = Triple("Alice", 25, true) // Triple data type
+    println("Triple: ${triple.first}, ${triple.second}, ${triple.third}")
+}
+// Demonstrates the use of triple data type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 19: Enum Class
+enum class Color {
+    RED, GREEN, BLUE
+}
+
+fun main() {
+    val favoriteColor: Color = Color.BLUE // Enum class
+    println("Favorite color: $favoriteColor")
+}
+// Demonstrates the use of enum class in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 20: Function Type
+fun main() {
+    val add: (Int, Int) -> Int = { a, b -> a + b } // Function type
+    val result = add(3, 4)
+    println("Result: $result")
+}
+// Demonstrates the use of function type in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Kotlin Operators: Syntax 
+////////////////////////////////////////////////////////////////////////////
+// Example 1: Arithmetic Operators
+fun main() {
+    val a = 10
+    val b = 5
+    println("Addition: ${a + b}")
+    println("Subtraction: ${a - b}")
+    println("Multiplication: ${a * b}")
+    println("Division: ${a / b}")
+    println("Modulus: ${a % b}")
+}
+// Demonstrates the use of arithmetic operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Assignment Operators
+fun main() {
+    var x = 10
+    x += 5
+    println("x += 5: $x")
+    x -= 3
+    println("x -= 3: $x")
+    x *= 2
+    println("x *= 2: $x")
+    x /= 4
+    println("x /= 4: $x")
+    x %= 3
+    println("x %= 3: $x")
+}
+// Demonstrates the use of assignment operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Unary Operators
+fun main() {
+    val a = 10
+    val b = -a
+    println("a: $a")
+    println("b: $b")
+    println("++a: ${++a}")
+    println("--a: ${--a}")
+}
+// Demonstrates the use of unary operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Equality Operators
+fun main() {
+    val a = 5
+    val b = 10
+    println("a == b: ${a == b}")
+    println("a != b: ${a != b}")
+}
+// Demonstrates the use of equality operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Comparison Operators
+fun main() {
+    val a = 5
+    val b = 10
+    println("a > b: ${a > b}")
+    println("a < b: ${a < b}")
+    println("a >= b: ${a >= b}")
+    println("a <= b: ${a <= b}")
+}
+// Demonstrates the use of comparison operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Logical Operators
+fun main() {
+    val a = true
+    val b = false
+    println("a && b: ${a && b}")
+    println("a || b: ${a || b}")
+    println("!a: ${!a}")
+}
+// Demonstrates the use of logical operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Bitwise Operators
+fun main() {
+    val a = 5 // 0101 in binary
+    val b = 3 // 0011 in binary
+    println("a and b: ${a and b}") // Bitwise AND
+    println("a or b: ${a or b}") // Bitwise OR
+    println("a xor b: ${a xor b}") // Bitwise XOR
+}
+// Demonstrates the use of bitwise operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Increment and Decrement Operators
+fun main() {
+    var a = 5
+    println("a++: ${a++}")
+    println("++a: ${++a}")
+    println("a--: ${a--}")
+    println("--a: ${--a}")
+}
+// Demonstrates the use of increment and decrement operators in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Range Operator
+fun main() {
+    val range = 1..5
+    for (i in range) {
+        println("Value: $i")
+    }
+}
+// Demonstrates the use of range operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: In Operator
+fun main() {
+    val list = listOf(1, 2, 3, 4, 5)
+    println("3 in list: ${3 in list}")
+    println("6 in list: ${6 in list}")
+}
+// Demonstrates the use of in operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 11: Indexing Operator
+fun main() {
+    val list = listOf("A", "B", "C")
+    println("First element: ${list[0]}")
+    println("Second element: ${list[1]}")
+    println("Third element: ${list[2]}")
+}
+// Demonstrates the use of indexing operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 12: Invoke Operator
+fun main() {
+    val greet = { name: String -> "Hello, $name!" }
+    println(greet("Alice"))
+}
+// Demonstrates the use of invoke operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 13: Elvis Operator
+fun main() {
+    val name: String? = null
+    val displayName = name ?: "Unknown"
+    println("Name: $displayName")
+}
+// Demonstrates the use of Elvis operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 14: Safe Call Operator
+fun main() {
+    val name: String? = "Alice"
+    println("Name length: ${name?.length}")
+    val nullName: String? = null
+    println("Null name length: ${nullName?.length}")
+}
+// Demonstrates the use of safe call operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 15: Non-Null Assertion Operator
+fun main() {
+    val name: String? = "Alice"
+    println("Name length: ${name!!.length}")
+}
+// Demonstrates the use of non-null assertion operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 16: Down-To Operator
+fun main() {
+    val range = 5 downTo 1
+    for (i in range) {
+        println("Value: $i")
+    }
+}
+// Demonstrates the use of down-to operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 17: Step Operator
+fun main() {
+    val range = 1..10 step 2
+    for (i in range) {
+        println("Value: $i")
+    }
+}
+// Demonstrates the use of step operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 18: Until Operator
+fun main() {
+    val range = 1 until 5
+    for (i in range) {
+        println("Value: $i")
+    }
+}
+// Demonstrates the use of until operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 19: Spread Operator
+fun main() {
+    val array = intArrayOf(1, 2, 3)
+    val list = listOf(*array)
+    println("List: $list")
+}
+// Demonstrates the use of spread operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 20: Destructuring Declarations
+fun main() {
+    val pair = Pair("Alice", 25)
+    val (name, age) = pair
+    println("Name: $name, Age: $age")
+}
+// Demonstrates the use of destructuring declarations in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+Kotlin string 
+////////////////////////////////////////////////////////////////
+
+// Example 1: String Concatenation
+fun main() {
+    val firstName = "John"
+    val lastName = "Doe"
+    val fullName = firstName + " " + lastName
+    println("Full name: $fullName")
+}
+// Demonstrates string concatenation in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: String Templates
+fun main() {
+    val firstName = "Jane"
+    val lastName = "Smith"
+    val fullName = "$firstName $lastName"
+    println("Full name: $fullName")
+}
+// Demonstrates string templates in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: String Length
+fun main() {
+    val text = "Hello, World!"
+    println("Length of text: ${text.length}")
+}
+// Demonstrates finding the length of a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Accessing Characters in a String
+fun main() {
+    val text = "Kotlin"
+    println("First character: ${text[0]}")
+    println("Last character: ${text[text.length - 1]}")
+}
+// Demonstrates accessing characters in a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Substring
+fun main() {
+    val text = "Hello, World!"
+    val substring = text.substring(7, 12)
+    println("Substring: $substring")
+}
+// Demonstrates extracting a substring in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: String Contains
+fun main() {
+    val text = "Hello, Kotlin!"
+    println("Contains 'Kotlin': ${text.contains("Kotlin")}")
+    println("Contains 'Java': ${text.contains("Java")}")
+}
+// Demonstrates checking if a string contains a substring in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: String Replace
+fun main() {
+    val text = "Hello, Kotlin!"
+    val newText = text.replace("Kotlin", "Java")
+    println("Original text: $text")
+    println("Replaced text: $newText")
+}
+// Demonstrates replacing a substring in a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: String Split
+fun main() {
+    val text = "Kotlin,Java,Python"
+    val languages = text.split(",")
+    println("Languages: ${languages.joinToString()}")
+}
+// Demonstrates splitting a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: String Trim
+fun main() {
+    val text = "   Hello, Kotlin!   "
+    val trimmedText = text.trim()
+    println("Original text: '$text'")
+    println("Trimmed text: '$trimmedText'")
+}
+// Demonstrates trimming whitespace from a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: String To Upper and Lower Case
+fun main() {
+    val text = "Hello, Kotlin!"
+    println("Uppercase: ${text.uppercase()}")
+    println("Lowercase: ${text.lowercase()}")
+}
+// Demonstrates converting a string to uppercase and lowercase in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+Kotkin boolean 
+///////////////////////////////////////////////////////////////////////
+
+
+
+// Example 1: Simple Boolean Variable
+fun main() {
+    val isTrue: Boolean = true
+    val isFalse: Boolean = false
+    println("isTrue: $isTrue")
+    println("isFalse: $isFalse")
+}
+// Demonstrates declaring and initializing boolean variables in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Boolean Expressions
+fun main() {
+    val a = 5
+    val b = 10
+    val result = a < b
+    println("a < b: $result")
+}
+// Demonstrates boolean expressions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Boolean AND Operator
+fun main() {
+    val a = true
+    val b = false
+    val result = a && b
+    println("a && b: $result")
+}
+// Demonstrates the boolean AND operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Boolean OR Operator
+fun main() {
+    val a = true
+    val b = false
+    val result = a || b
+    println("a || b: $result")
+}
+// Demonstrates the boolean OR operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Boolean NOT Operator
+fun main() {
+    val a = true
+    val result = !a
+    println("!a: $result")
+}
+// Demonstrates the boolean NOT operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Boolean Equality
+fun main() {
+    val a = true
+    val b = false
+    println("a == b: ${a == b}")
+    println("a != b: ${a != b}")
+}
+// Demonstrates boolean equality in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Boolean in Conditional Statements
+fun main() {
+    val isRaining = true
+    if (isRaining) {
+        println("Take an umbrella!")
+    } else {
+        println("No need for an umbrella.")
+    }
+}
+// Demonstrates using booleans in conditional statements in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Boolean in When Expression
+fun main() {
+    val isSunny = false
+    when (isSunny) {
+        true -> println("It's sunny outside.")
+        false -> println("It's not sunny outside.")
+    }
+}
+// Demonstrates using booleans in a when expression in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Combining Boolean Expressions
+fun main() {
+    val a = true
+    val b = false
+    val c = true
+    val result = a && b || c
+    println("a && b || c: $result")
+}
+// Demonstrates combining boolean expressions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Boolean with Elvis Operator
+fun main() {
+    val isAvailable: Boolean? = null
+    val result = isAvailable ?: false
+    println("isAvailable ?: false: $result")
+}
+// Demonstrates using the Elvis operator with booleans in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kotlin conditional 
+//////////////////////////////////////////////////////////////////////
+
+
+
+// Example 1: Simple If Statement
+fun main() {
+    val x = 10
+    if (x > 5) {
+        println("x is greater than 5")
+    }
+}
+// Demonstrates a simple if statement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: If-Else Statement
+fun main() {
+    val x = 10
+    if (x > 5) {
+        println("x is greater than 5")
+    } else {
+        println("x is not greater than 5")
+    }
+}
+// Demonstrates an if-else statement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: If-Else If-Else Statement
+fun main() {
+    val x = 10
+    if (x > 10) {
+        println("x is greater than 10")
+    } else if (x == 10) {
+        println("x is equal to 10")
+    } else {
+        println("x is less than 10")
+    }
+}
+// Demonstrates an if-else if-else statement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Nested If Statement
+fun main() {
+    val x = 10
+    if (x > 5) {
+        if (x < 15) {
+            println("x is between 5 and 15")
+        }
+    }
+}
+// Demonstrates a nested if statement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: If-Else with Boolean Expression
+fun main() {
+    val isSunny = true
+    if (isSunny) {
+        println("It's sunny outside.")
+    } else {
+        println("It's not sunny outside.")
+    }
+}
+// Demonstrates if-else with a boolean expression in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: If-Else with Comparison
+fun main() {
+    val a = 10
+    val b = 20
+    if (a > b) {
+        println("a is greater than b")
+    } else {
+        println("a is not greater than b")
+    }
+}
+// Demonstrates if-else with comparison in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: If-Else with Multiple Conditions
+fun main() {
+    val age = 18
+    if (age >= 18 && age <= 25) {
+        println("You are a young adult.")
+    } else {
+        println("You are not a young adult.")
+    }
+}
+// Demonstrates if-else with multiple conditions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: If-Else with Arithmetic Operations
+fun main() {
+    val a = 10
+    val b = 5
+    if (a + b > 20) {
+        println("Sum is greater than 20")
+    } else {
+        println("Sum is not greater than 20")
+    }
+}
+// Demonstrates if-else with arithmetic operations in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: If-Else with String Comparison
+fun main() {
+    val password = "secret"
+    if (password == "secret") {
+        println("Access granted")
+    } else {
+        println("Access denied")
+    }
+}
+// Demonstrates if-else with string comparison in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: If-Else with User Input
+import java.util.Scanner
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+    print("Enter a number: ")
+    val number = scanner.nextInt()
+    if (number % 2 == 0) {
+        println("The number is even")
+    } else {
+        println("The number is odd")
+    }
+}
+// Demonstrates if-else with user input in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 11: If-Else with Floating-Point Comparison
+fun main() {
+    val temperature = 36.5
+    if (temperature > 37.0) {
+        println("You have a fever")
+    } else {
+        println("Your temperature is normal")
+    }
+}
+// Demonstrates if-else with floating-point comparison in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 12: If-Else with Nullable Variable
+fun main() {
+    val name: String? = null
+    if (name != null) {
+        println("Name: $name")
+    } else {
+        println("Name is null")
+    }
+}
+// Demonstrates if-else with nullable variable in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 13: If-Else with Elvis Operator
+fun main() {
+    val name: String? = null
+    val displayName = name ?: "Unknown"
+    println("Name: $displayName")
+}
+// Demonstrates if-else with Elvis operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 14: If-Else with Safe Call Operator
+fun main() {
+    val name: String? = "Alice"
+    if (name?.length ?: 0 > 5) {
+        println("Name is long")
+    } else {
+        println("Name is short")
+    }
+}
+// Demonstrates if-else with safe call operator in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 15: If-Else with Custom Function
+fun isEven(number: Int): Boolean {
+    return number % 2 == 0
+}
+
+fun main() {
+    val number = 10
+    if (isEven(number)) {
+        println("The number is even")
+    } else {
+        println("The number is odd")
+    }
+}
+// Demonstrates if-else with custom function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 16: If-Else with Range Check
+fun main() {
+    val score = 85
+    if (score in 90..100) {
+        println("Grade: A")
+    } else if (score in 80..89) {
+        println("Grade: B")
+    } else if (score in 70..79) {
+        println("Grade: C")
+    } else {
+        println("Grade: D")
+    }
+}
+// Demonstrates if-else with range check in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 17: If-Else with Multiple Variables
+fun main() {
+    val a = 10
+    val b = 5
+    val c = 15
+    if (a > b && a > c) {
+        println("a is the greatest")
+    } else if (b > a && b > c) {
+        println("b is the greatest")
+    } else {
+        println("c is the greatest")
+    }
+}
+// Demonstrates if-else with multiple variables in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 18: If-Else with Custom Message
+fun main() {
+    val score = 75
+    val message = if (score >= 90) {
+        "Excellent"
+    } else if (score >= 75) {
+        "Good"
+    } else if (score >= 60) {
+        "Pass"
+    } else {
+        "Fail"
+    }
+    println("Score: $score, Message: $message")
+}
+// Demonstrates if-else with custom message in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 19: If-Else with Function Return
+fun checkAge(age: Int): String {
+    return if (age >= 18) {
+        "Adult"
+    } else {
+        "Minor"
+    }
+}
+
+fun main() {
+    val age = 20
+    val status = checkAge(age)
+    println("Age: $age, Status: $status")
+}
+// Demonstrates if-else with function return in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 20: If-Else with Early Return
+fun main() {
+    val age = 16
+    if (age < 18) {
+        println("You are not eligible to vote")
+        return
+    }
+    println("You are eligible to vote")
+}
+// Demonstrates if-else with early return in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+Kotlin when 
+
+////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////
+
+// Example 2: When Expression with String
+fun main() {
+    val animal = "Dog"
+    val sound = when (animal) {
+        "Dog" -> "Bark"
+        "Cat" -> "Meow"
+        "Cow" -> "Moo"
+        else -> "Unknown sound"
+    }
+    println("Animal sound: $sound")
+}
+// Demonstrates a when expression with strings in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: When Expression with Range
+fun main() {
+    val score = 85
+    val grade = when (score) {
+        in 90..100 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
+        else -> "D"
+    }
+    println("Grade: $grade")
+}
+// Demonstrates a when expression with ranges in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: When Expression with Multiple Conditions
+fun main() {
+    val number = 15
+    val result = when {
+        number % 2 == 0 -> "Even"
+        number % 3 == 0 -> "Divisible by 3"
+        else -> "Odd"
+    }
+    println("Number: $result")
+}
+// Demonstrates a when expression with multiple conditions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: When Expression with Type Checking
+fun main() {
+    val obj: Any = "Hello"
+    val result = when (obj) {
+        is String -> "It's a String"
+        is Int -> "It's an Int"
+        else -> "Unknown type"
+    }
+    println("Result: $result")
+}
+// Demonstrates a when expression with type checking in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: When Expression with Enum
+enum class Color {
+    RED, GREEN, BLUE
+}
+
+fun main() {
+    val color = Color.RED
+    val result = when (color) {
+        Color.RED -> "Stop"
+        Color.GREEN -> "Go"
+        Color.BLUE -> "Cool"
+    }
+    println("Color: $result")
+}
+// Demonstrates a when expression with enums in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: When Expression as Statement
+fun main() {
+    val day = 5
+    when (day) {
+        1, 2, 3, 4, 5 -> println("Weekday")
+        6, 7 -> println("Weekend")
+        else -> println("Invalid day")
+    }
+}
+// Demonstrates a when expression as a statement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 1: Simple When Expression with 4 Days
+fun main() {
+    val day = 3
+    val dayName = when (day) {
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        else -> "Invalid day"
+    }
+    println("Day: $dayName")
+}
+// Demonstrates a simple when expression in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: When Expression with Function Call and 4 Days
+fun getDayName(day: Int) = when (day) {
+    1 -> "Monday"
+    2 -> "Tuesday"
+    3 -> "Wednesday"
+    4 -> "Thursday"
+    else -> "Invalid day"
+}
+
+fun main() {
+    println("Day: ${getDayName(3)}")
+}
+// Demonstrates a when expression with a function call in Kotlin
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+
+// Example 9: When Expression with Boolean Conditions
+fun main() {
+    val isSunny = true
+    val result = when {
+        isSunny -> "It's sunny outside."
+        else -> "It's not sunny outside."
+    }
+    println(result)
+}
+// Demonstrates a when expression with boolean conditions in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: When Expression with Default Case
+fun main() {
+    val number = 4
+    val result = when (number) {
+        1 -> "One"
+        2 -> "Two"
+        3 -> "Three"
+        else -> "Unknown"
+    }
+    println("Number: $result")
+}
+// Demonstrates a when expression with a default case in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kotlin while loop
+// Example 1: Basic While Loop
+fun main() {
+    var i = 0
+    while (i < 5) {
+        println("i: $i")
+        i++
+    }
+}
+// Demonstrates a basic while loop in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: While Loop with Condition
+fun main() {
+    var number = 1
+    while (number <= 5) {
+        println(number)
+        number++
+    }
+}
+// Demonstrates a while loop with a condition in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: While Loop with Decrement
+fun main() {
+    var i = 5
+    while (i > 0) {
+        println("i: $i")
+        i--
+    }
+}
+// Demonstrates a while loop with decrement in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: While Loop with User Input
+import java.util.Scanner
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+    var number: Int
+    do {
+        print("Enter a positive number (negative to quit): ")
+        number = scanner.nextInt()
+        if (number >= 0) println("You entered: $number")
+    } while (number >= 0)
+}
+// Demonstrates a while loop with user input in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: While Loop with Break
+fun main() {
+    var i = 0
+    while (i < 10) {
+        if (i == 5) break
+        println("i: $i")
+        i++
+    }
+}
+// Demonstrates a while loop with break in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: While Loop with Continue
+fun main() {
+    var i = 0
+    while (i < 10) {
+        i++
+        if (i % 2 == 0) continue
+        println("i: $i")
+    }
+}
+// Demonstrates a while loop with continue in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: While Loop to Calculate Sum
+fun main() {
+    var sum = 0
+    var i = 1
+    while (i <= 5) {
+        sum += i
+        i++
+    }
+    println("Sum: $sum")
+}
+// Demonstrates a while loop to calculate sum in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: While Loop to Reverse a Number
+fun main() {
+    var number = 1234
+    var reversed = 0
+    while (number != 0) {
+        val digit = number % 10
+        reversed = reversed * 10 + digit
+        number /= 10
+    }
+    println("Reversed: $reversed")
+}
+// Demonstrates a while loop to reverse a number in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: While Loop with Boolean Condition
+fun main() {
+    var isRunning = true
+    var count = 0
+    while (isRunning) {
+        println("Running...")
+        count++
+        if (count == 3) isRunning = false
+    }
+}
+// Demonstrates a while loop with a boolean condition in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Nested While Loops
+fun main() {
+    var i = 1
+    while (i <= 2) {
+        var j = 1
+        while (j <= 2) {
+            println("i: $i, j: $j")
+            j++
+        }
+        i++
+    }
+}
+// Demonstrates nested while loops in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+// Example 1: While Loop with Break
+fun main() {
+    var i = 0
+    while (i < 10) {
+        if (i == 5) break
+        println("i: $i")
+        i++
+    }
+}
+// Demonstrates a while loop with break in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: While Loop with Continue
+fun main() {
+    var i = 0
+    while (i < 10) {
+        i++
+        if (i % 2 == 0) continue
+        println("i: $i")
+    }
+}
+// Demonstrates a while loop with continue in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: While Loop with Break at Midpoint
+fun main() {
+    var i = 0
+    while (i < 10) {
+        println("i: $i")
+        if (i == 5) break
+        i++
+    }
+}
+// Demonstrates a while loop with break at midpoint in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: While Loop with Continue Skipping Multiples of 3
+fun main() {
+    var i = 0
+    while (i < 10) {
+        i++
+        if (i % 3 == 0) continue
+        println("i: $i")
+    }
+}
+// Demonstrates a while loop with continue skipping multiples of 3 in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: While Loop with Break after First Even Number
+fun main() {
+    var i = 0
+    while (i < 10) {
+        if (i % 2 == 0 && i != 0) break
+        println("i: $i")
+        i++
+    }
+}
+// Demonstrates a while loop with break after first even number in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: While Loop with Continue Skipping First Half
+fun main() {
+    var i = 0
+    while (i < 10) {
+        i++
+        if (i <= 5) continue
+        println("i: $i")
+    }
+}
+// Demonstrates a while loop with continue skipping first half in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: While Loop with Break on Negative Input
+fun main() {
+    val numbers = listOf(1, 2, -3, 4, 5)
+    var i = 0
+    while (i < numbers.size) {
+        if (numbers[i] < 0) break
+        println("Number: ${numbers[i]}")
+        i++
+    }
+}
+// Demonstrates a while loop with break on negative input in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: While Loop with Continue on Zero
+fun main() {
+    val numbers = listOf(1, 0, 3, 4, 5)
+    var i = 0
+    while (i < numbers.size) {
+        if (numbers[i] == 0) {
+            i++
+            continue
+        }
+        println("Number: ${numbers[i]}")
+        i++
+    }
+}
+// Demonstrates a while loop with continue on zero in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: While Loop with Break and Continue Combined
+fun main() {
+    var i = 0
+    while (i < 10) {
+        i++
+        if (i == 3) continue
+        if (i == 7) break
+        println("i: $i")
+    }
+}
+// Demonstrates a while loop with break and continue combined in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Nested While Loop with Break and Continue
+fun main() {
+    var i = 1
+    while (i <= 3) {
+        var j = 1
+        while (j <= 3) {
+            if (j == 2) {
+                j++
+                continue
+            }
+            if (i == 3) break
+            println("i: $i, j: $j")
+            j++
+        }
+        i++
+    }
+}
+// Demonstrates nested while loops with break and continue in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kotlin Arrays
+/////////////////////////////////////////////////////////////////////////////////////
+
+// Example 1: Basic Array Declaration and Initialization
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    println("Numbers: ${numbers.joinToString()}")
+}
+// Demonstrates basic array declaration and initialization in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Accessing Array Elements
+fun main() {
+    val fruits = arrayOf("Apple", "Banana", "Cherry")
+    println("First fruit: ${fruits[0]}")
+    println("Second fruit: ${fruits[1]}")
+}
+// Demonstrates accessing array elements in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Modifying Array Elements
+fun main() {
+    val colors = arrayOf("Red", "Green", "Blue")
+    colors[1] = "Yellow"
+    println("Colors: ${colors.joinToString()}")
+}
+// Demonstrates modifying array elements in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Iterating Over an Array
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    for (number in numbers) {
+        println(number)
+    }
+}
+// Demonstrates iterating over an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Array of Nulls
+fun main() {
+    val arrayOfNulls = arrayOfNulls<String>(3)
+    println("Array of nulls: ${arrayOfNulls.joinToString()}")
+}
+// Demonstrates creating an array of nulls in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Array Initialization with Lambda
+fun main() {
+    val squares = Array(5) { i -> (i + 1) * (i + 1) }
+    println("Squares: ${squares.joinToString()}")
+}
+// Demonstrates array initialization with a lambda in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Array of Primitives
+fun main() {
+    val intArray = intArrayOf(1, 2, 3, 4, 5)
+    println("Int Array: ${intArray.joinToString()}")
+}
+// Demonstrates creating an array of primitives in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Array with Mixed Types
+fun main() {
+    val mixedArray = arrayOf(1, "Hello", 3.14)
+    println("Mixed Array: ${mixedArray.joinToString()}")
+}
+// Demonstrates creating an array with mixed types in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Array with Custom Class
+data class Person(val name: String, val age: Int)
+
+fun main() {
+    val people = arrayOf(Person("Alice", 30), Person("Bob", 25))
+    println("People: ${people.joinToString { it.name }}")
+}
+// Demonstrates creating an array with custom class in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Array Size
+fun main() {
+    val cities = arrayOf("New York", "Los Angeles", "Chicago")
+    println("Array size: ${cities.size}")
+}
+// Demonstrates getting the size of an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 11: Checking if Array is Empty
+fun main() {
+    val emptyArray = arrayOf<String>()
+    println("Is array empty? ${emptyArray.isEmpty()}")
+}
+// Demonstrates checking if an array is empty in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 12: Array Contains Element
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    println("Contains 3? ${numbers.contains(3)}")
+    println("Contains 6? ${numbers.contains(6)}")
+}
+// Demonstrates checking if an array contains an element in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 13: Reversing an Array
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    val reversed = numbers.reversedArray()
+    println("Reversed: ${reversed.joinToString()}")
+}
+// Demonstrates reversing an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 14: Sorting an Array
+fun main() {
+    val numbers = arrayOf(5, 3, 1, 4, 2)
+    numbers.sort()
+    println("Sorted: ${numbers.joinToString()}")
+}
+// Demonstrates sorting an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 15: Array Slicing
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    val slice = numbers.sliceArray(1..3)
+    println("Slice: ${slice.joinToString()}")
+}
+// Demonstrates slicing an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 16: Array Sum
+fun main() {
+    val numbers = intArrayOf(1, 2, 3, 4, 5)
+    val sum = numbers.sum()
+    println("Sum: $sum")
+}
+// Demonstrates summing an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 17: Array Average
+fun main() {
+    val numbers = intArrayOf(1, 2, 3, 4, 5)
+    val average = numbers.average()
+    println("Average: $average")
+}
+// Demonstrates calculating the average of an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 18: Array Filtering
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    val evenNumbers = numbers.filter { it % 2 == 0 }.toTypedArray()
+    println("Even Numbers: ${evenNumbers.joinToString()}")
+}
+// Demonstrates filtering an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 19: Array Mapping
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    val squares = numbers.map { it * it }.toTypedArray()
+    println("Squares: ${squares.joinToString()}")
+}
+// Demonstrates mapping an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 20: Array Joining
+fun main() {
+    val words = arrayOf("Kotlin", "is", "fun")
+    val sentence = words.joinToString(" ")
+    println("Sentence: $sentence")
+}
+// Demonstrates joining elements of an array in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+Kotlin for loop
+
+
+
+// Example 1: Basic For Loop
+fun main() {
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    for (number in numbers) {
+        println(number)
+    }
+}
+// Demonstrates a basic for loop in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: For Loop with Index
+fun main() {
+    val fruits = arrayOf("Apple", "Banana", "Cherry")
+    for (index in fruits.indices) {
+        println("Fruit at index $index is ${fruits[index]}")
+    }
+}
+// Demonstrates a for loop with indices in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: For Loop with Range
+fun main() {
+    for (i in 1..5) {
+        println(i)
+    }
+}
+// Demonstrates a for loop with a range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: For Loop with DownTo
+fun main() {
+    for (i in 5 downTo 1) {
+        println(i)
+    }
+}
+// Demonstrates a for loop with downTo in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: For Loop with Step
+fun main() {
+    for (i in 1..10 step 2) {
+        println(i)
+    }
+}
+// Demonstrates a for loop with step in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: For Loop with Until
+fun main() {
+    for (i in 1 until 5) {
+        println(i)
+    }
+}
+// Demonstrates a for loop with until in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: For Loop with Array Indices
+fun main() {
+    val colors = arrayOf("Red", "Green", "Blue")
+    for (i in colors.indices) {
+        println("Color at index $i is ${colors[i]}")
+    }
+}
+// Demonstrates a for loop with array indices in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: For Loop with Characters in a String
+fun main() {
+    val text = "Kotlin"
+    for (char in text) {
+        println(char)
+    }
+}
+// Demonstrates a for loop with characters in a string in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: For Loop with List
+fun main() {
+    val names = listOf("Alice", "Bob", "Charlie")
+    for (name in names) {
+        println(name)
+    }
+}
+// Demonstrates a for loop with a list in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: For Loop with Map
+fun main() {
+    val map = mapOf("name" to "Alice", "age" to 30)
+    for ((key, value) in map) {
+        println("$key: $value")
+    }
+}
+// Demonstrates a for loop with a map in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+Kotlin range 
+//////////////////////////////////////
+// Example 1: Simple Range
+fun main() {
+    val range = 1..5
+    for (i in range) {
+        println(i)
+    }
+}
+// Demonstrates a simple range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Reverse Range
+fun main() {
+    val range = 5 downTo 1
+    for (i in range) {
+        println(i)
+    }
+}
+// Demonstrates a reverse range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Range with Step
+fun main() {
+    val range = 1..10 step 2
+    for (i in range) {
+        println(i)
+    }
+}
+// Demonstrates a range with step in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Range with Until
+fun main() {
+    val range = 1 until 5
+    for (i in range) {
+        println(i)
+    }
+}
+// Demonstrates a range with until in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Check if Value is in Range
+fun main() {
+    val range = 1..5
+    val value = 3
+    if (value in range) {
+        println("$value is in range")
+    } else {
+        println("$value is not in range")
+    }
+}
+// Demonstrates checking if a value is in a range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Iterate Over Characters in Range
+fun main() {
+    val range = 'a'..'e'
+    for (ch in range) {
+        println(ch)
+    }
+}
+// Demonstrates iterating over characters in a range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Iterate Over Reverse Characters in Range
+fun main() {
+    val range = 'e' downTo 'a'
+    for (ch in range) {
+        println(ch)
+    }
+}
+// Demonstrates iterating over reverse characters in a range in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Range with Float Values
+fun main() {
+    val start = 1.0
+    val end = 5.0
+    val step = 1.0
+    var value = start
+    while (value <= end) {
+        println(value)
+        value += step
+    }
+}
+// Demonstrates a range with float values in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Range with Double Values
+fun main() {
+    val start = 0.0
+    val end = 2.0
+    val step = 0.5
+    var value = start
+    while (value <= end) {
+        println(value)
+        value += step
+    }
+}
+// Demonstrates a range with double values in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Range in Conditional Expression
+fun main() {
+    val range = 1..10
+    val number = 7
+    when (number) {
+        in range -> println("$number is within range")
+        !in range -> println("$number is outside range")
+    }
+}
+// Demonstrates using a range in a conditional expression in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+Kotlin functions 
+//////////////////////////////////////////////////////////////
+
+// Example 1: Simple Function
+fun greet() {
+    println("Hello, World!")
+}
+
+fun main() {
+    greet()
+}
+// Demonstrates a simple function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Function with Parameters
+fun printName(name: String) {
+    println("Name: $name")
+}
+
+fun main() {
+    printName("Alice")
+}
+// Demonstrates a function with parameters in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Function with Return Value
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val sum = add(3, 4)
+    println("Sum: $sum")
+}
+// Demonstrates a function with a return value in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Function with Default Parameters
+fun greet(name: String = "World") {
+    println("Hello, $name!")
+}
+
+fun main() {
+    greet()
+    greet("Alice")
+}
+// Demonstrates a function with default parameters in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Function Overloading
+fun printInfo(name: String) {
+    println("Name: $name")
+}
+
+fun printInfo(age: Int) {
+    println("Age: $age")
+}
+
+fun main() {
+    printInfo("Alice")
+    printInfo(25)
+}
+// Demonstrates function overloading in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Inline Function
+inline fun square(n: Int) = n * n
+
+fun main() {
+    println("Square of 5: ${square(5)}")
+}
+// Demonstrates an inline function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Lambda Function
+fun main() {
+    val greet = { name: String -> println("Hello, $name!") }
+    greet("Alice")
+}
+// Demonstrates a lambda function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Higher-Order Function
+fun operate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
+    return operation(a, b)
+}
+
+fun main() {
+    val sum = operate(3, 4) { x, y -> x + y }
+    println("Sum: $sum")
+}
+// Demonstrates a higher-order function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Recursive Function
+fun factorial(n: Int): Int {
+    return if (n == 0) 1 else n * factorial(n - 1)
+}
+
+fun main() {
+    println("Factorial of 5: ${factorial(5)}")
+}
+// Demonstrates a recursive function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Extension Function
+fun String.reverse(): String {
+    return this.reversed()
+}
+
+fun main() {
+    val original = "Kotlin"
+    val reversed = original.reverse()
+    println("Reversed: $reversed")
+}
+// Demonstrates an extension function in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kotlin classes
+////////////////////////////////////////////////////////////// Example 1: Basic Class and Object
+class Person {
+    var name: String = ""
+    var age: Int = 0
+}
+
+fun main() {
+    val person = Person()
+    person.name = "Alice"
+    person.age = 30
+    println("Name: ${person.name}, Age: ${person.age}")
+}
+// Demonstrates a basic class and object in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 2: Class with Constructor
+class Person(val name: String, var age: Int)
+
+fun main() {
+    val person = Person("Bob", 25)
+    println("Name: ${person.name}, Age: ${person.age}")
+}
+// Demonstrates a class with a constructor in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 3: Class with Methods
+class Person(val name: String, var age: Int) {
+    fun greet() {
+        println("Hello, my name is $name.")
+    }
+}
+
+fun main() {
+    val person = Person("Charlie", 20)
+    person.greet()
+}
+// Demonstrates a class with methods in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 4: Class with Secondary Constructor
+class Person {
+    var name: String
+    var age: Int
+
+    constructor(name: String, age: Int) {
+        this.name = name
+        this.age = age
+    }
+}
+
+fun main() {
+    val person = Person("David", 35)
+    println("Name: ${person.name}, Age: ${person.age}")
+}
+// Demonstrates a class with a secondary constructor in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 5: Class with Init Block
+class Person(val name: String, var age: Int) {
+    init {
+        println("Person created: $name, $age years old")
+    }
+}
+
+fun main() {
+    val person = Person("Eve", 28)
+}
+// Demonstrates a class with an init block in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 6: Data Class
+data class Person(val name: String, var age: Int)
+
+fun main() {
+    val person = Person("Frank", 40)
+    println("Name: ${person.name}, Age: ${person.age}")
+}
+// Demonstrates a data class in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 7: Class Inheritance
+open class Animal(val name: String) {
+    open fun sound() {
+        println("Animal sound")
+    }
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun sound() {
+        println("Bark")
+    }
+}
+
+fun main() {
+    val dog = Dog("Buddy")
+    dog.sound()
+}
+// Demonstrates class inheritance in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 8: Abstract Class
+abstract class Animal(val name: String) {
+    abstract fun sound()
+}
+
+class Cat(name: String) : Animal(name) {
+    override fun sound() {
+        println("Meow")
+    }
+}
+
+fun main() {
+    val cat = Cat("Whiskers")
+    cat.sound()
+}
+// Demonstrates an abstract class in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 9: Interface
+interface Drivable {
+    fun drive()
+}
+
+class Car : Drivable {
+    override fun drive() {
+        println("Driving the car")
+    }
+}
+
+fun main() {
+    val car = Car()
+    car.drive()
+}
+// Demonstrates an interface in Kotlin
+//////////////////////////////////////////////////////////////////
+
+// Example 10: Companion Object
+class MyClass {
+    companion object {
+        fun greet() {
+            println("Hello from companion object")
+        }
+    }
+}
+
+fun main() {
+    MyClass.greet()
+}
+// Demonstrates a companion object in Kotlin
+//////////////////////////////////////////////////////////////////
+
+
+
+
+

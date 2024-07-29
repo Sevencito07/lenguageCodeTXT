@@ -1,0 +1,1597 @@
+ruby variables : syntax 
+# Example 1: Local Variable
+def local_example
+  local_var = "Local variable"
+  puts local_var
+end
+local_example
+# Demonstrates a local variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Instance Variable
+class MyClass
+  def initialize(name)
+    @instance_var = name
+    puts @instance_var
+  end
+end
+MyClass.new("Alice")
+# Demonstrates an instance variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Class Variable
+class MyClass
+  @@class_var = "Class variable"
+  def show_class_var
+    puts @@class_var
+  end
+end
+MyClass.new.show_class_var
+# Demonstrates a class variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Global Variable
+$global_var = "Global variable"
+def show_global_var
+  puts $global_var
+end
+show_global_var
+# Demonstrates a global variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Constant
+class MyClass
+  MY_CONSTANT = "Constant"
+  def show_constant
+    puts MY_CONSTANT
+  end
+end
+MyClass.new.show_constant
+# Demonstrates a constant in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Array Variable
+array_var = [1, 2, 3]
+puts array_var.join(", ")
+# Demonstrates an array variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Hash Variable
+hash_var = { key1: "value1", key2: "value2" }
+puts hash_var[:key1]
+# Demonstrates a hash variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 8: String Variable
+string_var = "Hello, Ruby!"
+puts string_var
+# Demonstrates a string variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Integer Variable
+integer_var = 42
+puts integer_var
+# Demonstrates an integer variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Float Variable
+float_var = 3.14
+puts float_var
+# Demonstrates a float variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Boolean Variable
+boolean_var = true
+puts boolean_var
+# Demonstrates a boolean variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 12: Symbol Variable
+symbol_var = :my_symbol
+puts symbol_var
+# Demonstrates a symbol variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 13: Nil Variable
+nil_var = nil
+puts nil_var.nil?
+# Demonstrates a nil variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 14: Range Variable
+range_var = (1..5)
+puts range_var.to_a.join(", ")
+# Demonstrates a range variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 15: File Variable
+file_var = File.new("test.txt", "w")
+file_var.puts("Hello, file!")
+file_var.close
+# Demonstrates a file variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 16: Date Variable
+require 'date'
+date_var = Date.today
+puts date_var
+# Demonstrates a date variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 17: Time Variable
+time_var = Time.now
+puts time_var
+# Demonstrates a time variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 18: Regexp Variable
+regexp_var = /hello/
+puts regexp_var.match("hello world")
+# Demonstrates a regexp variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Proc Variable
+proc_var = Proc.new { |x| x * 2 }
+puts proc_var.call(5)
+# Demonstrates a proc variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Lambda Variable
+lambda_var = ->(x) { x * 3 }
+puts lambda_var.call(3)
+# Demonstrates a lambda variable in Ruby
+//////////////////////////////////////////////////////////////////
+
+
+
+
+ruby numbers: syntax
+//////////////////////////////////////////////////////////
+
+# Example 1: Integer
+integer_var = 42
+puts "Integer: #{integer_var}"
+# Demonstrates an integer in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Float
+float_var = 3.14
+puts "Float: #{float_var}"
+# Demonstrates a float in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Rational
+rational_var = Rational(2, 3)
+puts "Rational: #{rational_var}"
+# Demonstrates a rational number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Complex
+complex_var = Complex(1, 2)
+puts "Complex: #{complex_var}"
+# Demonstrates a complex number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 5: BigDecimal (requires 'bigdecimal' library)
+require 'bigdecimal'
+bigdecimal_var = BigDecimal("123.456")
+puts "BigDecimal: #{bigdecimal_var}"
+# Demonstrates a bigdecimal number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Arithmetic Operations
+sum = 5 + 3
+difference = 10 - 2
+product = 4 * 2
+quotient = 8 / 2
+puts "Sum: #{sum}, Difference: #{difference}, Product: #{product}, Quotient: #{quotient}"
+# Demonstrates arithmetic operations in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Exponentiation
+exponent = 2**3
+puts "2 to the power of 3: #{exponent}"
+# Demonstrates exponentiation in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Integer Division and Modulus
+quotient = 10 / 3
+modulus = 10 % 3
+puts "Quotient: #{quotient}, Modulus: #{modulus}"
+# Demonstrates integer division and modulus in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Absolute Value
+negative_number = -10
+absolute_value = negative_number.abs
+puts "Absolute value of -10: #{absolute_value}"
+# Demonstrates absolute value in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Rounding
+float_number = 3.14159
+rounded = float_number.round(2)
+puts "Rounded to 2 decimal places: #{rounded}"
+# Demonstrates rounding in Ruby
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ruby operators : syntax
+////////////////////////////////////////////////////////////////////////////
+# Example 1: Integer
+integer_var = 42
+puts "Integer: #{integer_var}"
+# Demonstrates an integer in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Float
+float_var = 3.14
+puts "Float: #{float_var}"
+# Demonstrates a float in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Rational
+rational_var = Rational(2, 3)
+puts "Rational: #{rational_var}"
+# Demonstrates a rational number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Complex
+complex_var = Complex(1, 2)
+puts "Complex: #{complex_var}"
+# Demonstrates a complex number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 5: BigDecimal (requires 'bigdecimal' library)
+require 'bigdecimal'
+bigdecimal_var = BigDecimal("123.456")
+puts "BigDecimal: #{bigdecimal_var}"
+# Demonstrates a bigdecimal number in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Arithmetic Operations
+sum = 5 + 3
+difference = 10 - 2
+product = 4 * 2
+quotient = 8 / 2
+puts "Sum: #{sum}, Difference: #{difference}, Product: #{product}, Quotient: #{quotient}"
+# Demonstrates arithmetic operations in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Exponentiation
+exponent = 2**3
+puts "2 to the power of 3: #{exponent}"
+# Demonstrates exponentiation in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Integer Division and Modulus
+quotient = 10 / 3
+modulus = 10 % 3
+puts "Quotient: #{quotient}, Modulus: #{modulus}"
+# Demonstrates integer division and modulus in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Absolute Value
+negative_number = -10
+absolute_value = negative_number.abs
+puts "Absolute value of -10: #{absolute_value}"
+# Demonstrates absolute value in Ruby
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Rounding
+float_number = 3.14159
+rounded = float_number.round(2)
+puts "Rounded to 2 decimal places: #{rounded}"
+# Demonstrates rounding in Ruby
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ruby lists
+////////////////////////////////////////////////////////
+# Example 1: Creating an Array
+fruits = ["Apple", "Banana", "Cherry"]
+puts fruits.join(", ")
+# Output: Apple, Banana, Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Accessing Array Elements
+fruits = ["Apple", "Banana", "Cherry"]
+puts fruits[0]  # Output: Apple
+puts fruits[1]  # Output: Banana
+puts fruits[2]  # Output: Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Modifying Array Elements
+fruits = ["Apple", "Banana", "Cherry"]
+fruits[1] = "Blueberry"
+puts fruits.join(", ")  # Output: Apple, Blueberry, Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Adding Elements to an Array
+fruits = ["Apple", "Banana", "Cherry"]
+fruits << "Date"
+puts fruits.join(", ")  # Output: Apple, Banana, Cherry, Date
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Removing Elements from an Array
+fruits = ["Apple", "Banana", "Cherry"]
+fruits.delete("Cherry")
+puts fruits.join(", ")  # Output: Apple, Banana
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Iterating Over an Array
+fruits = ["Apple", "Banana", "Cherry"]
+fruits.each { |fruit| puts fruit }
+# Output: Apple
+# Banana
+# Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Checking if an Element Exists
+fruits = ["Apple", "Banana", "Cherry"]
+puts fruits.include?("Banana")  # Output: true
+puts fruits.include?("Date")    # Output: false
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Sorting an Array
+numbers = [3, 1, 4, 1, 5]
+sorted_numbers = numbers.sort
+puts sorted_numbers.join(", ")  # Output: 1, 1, 3, 4, 5
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Reversing an Array
+numbers = [1, 2, 3, 4, 5]
+reversed_numbers = numbers.reverse
+puts reversed_numbers.join(", ")  # Output: 5, 4, 3, 2, 1
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Array Length
+fruits = ["Apple", "Banana", "Cherry"]
+puts fruits.length  # Output: 3
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Combining Arrays
+array1 = [1, 2]
+array2 = [3, 4]
+combined_array = array1 + array2
+puts combined_array.join(", ")  # Output: 1, 2, 3, 4
+//////////////////////////////////////////////////////////////////
+
+# Example 12: Subtracting Arrays
+array1 = [1, 2, 3]
+array2 = [2, 3, 4]
+difference_array = array1 - array2
+puts difference_array.join(", ")  # Output: 1
+//////////////////////////////////////////////////////////////////
+
+# Example 13: Array Intersection
+array1 = [1, 2, 3]
+array2 = [2, 3, 4]
+intersection_array = array1 & array2
+puts intersection_array.join(", ")  # Output: 2, 3
+//////////////////////////////////////////////////////////////////
+
+# Example 14: Array Union
+array1 = [1, 2, 3]
+array2 = [2, 3, 4]
+union_array = array1 | array2
+puts union_array.join(", ")  # Output: 1, 2, 3, 4
+//////////////////////////////////////////////////////////////////
+
+# Example 15: Flattening an Array
+nested_array = [1, [2, 3], [4, [5, 6]]]
+flattened_array = nested_array.flatten
+puts flattened_array.join(", ")  # Output: 1, 2, 3, 4, 5, 6
+//////////////////////////////////////////////////////////////////
+
+# Example 16: Compacting an Array
+array_with_nils = [1, nil, 2, nil, 3]
+compacted_array = array_with_nils.compact
+puts compacted_array.join(", ")  # Output: 1, 2, 3
+//////////////////////////////////////////////////////////////////
+
+# Example 17: Mapping an Array
+numbers = [1, 2, 3, 4]
+squares = numbers.map { |n| n * n }
+puts squares.join(", ")  # Output: 1, 4, 9, 16
+//////////////////////////////////////////////////////////////////
+
+# Example 18: Selecting Elements from an Array
+numbers = [1, 2, 3, 4, 5]
+evens = numbers.select { |n| n.even? }
+puts evens.join(", ")  # Output: 2, 4
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Rejecting Elements from an Array
+numbers = [1, 2, 3, 4, 5]
+odds = numbers.reject { |n| n.even? }
+puts odds.join(", ")  # Output: 1, 3, 5
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Reducing an Array
+numbers = [1, 2, 3, 4, 5]
+sum = numbers.reduce(0) { |acc, n| acc + n }
+puts sum  # Output: 15
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+ruby condicional : syntax 
+////////////////////////////////////////////////////////////////////
+# Example 1: if Statement
+x = 10
+if x > 5
+  puts "x is greater than 5"
+end
+# Demonstrates a basic if statement
+//////////////////////////////////////////////////////////////////
+
+# Example 2: if-else Statement
+x = 3
+if x > 5
+  puts "x is greater than 5"
+else
+  puts "x is 5 or less"
+end
+# Demonstrates an if-else statement
+//////////////////////////////////////////////////////////////////
+
+# Example 3: if-elsif-else Statement
+x = 7
+if x > 10
+  puts "x is greater than 10"
+elsif x > 5
+  puts "x is greater than 5 but less than or equal to 10"
+else
+  puts "x is 5 or less"
+end
+# Demonstrates an if-elsif-else statement
+//////////////////////////////////////////////////////////////////
+
+# Example 4: unless Statement
+x = 3
+unless x > 5
+  puts "x is 5 or less"
+end
+# Demonstrates an unless statement
+//////////////////////////////////////////////////////////////////
+
+# Example 5: case-when Statement
+grade = "B"
+case grade
+when "A"
+  puts "Excellent!"
+when "B"
+  puts "Good job!"
+when "C"
+  puts "You can do better."
+else
+  puts "Invalid grade."
+end
+# Demonstrates a case-when statement
+//////////////////////////////////////////////////////////////////
+
+# Example 6: while Loop
+i = 1
+while i <= 5
+  puts i
+  i += 1
+end
+# Demonstrates a while loop
+//////////////////////////////////////////////////////////////////
+
+# Example 7: until Loop
+i = 1
+until i > 5
+  puts i
+  i += 1
+end
+# Demonstrates an until loop
+//////////////////////////////////////////////////////////////////
+
+# Example 8: for Loop
+for i in 1..5
+  puts i
+end
+# Demonstrates a for loop
+//////////////////////////////////////////////////////////////////
+
+# Example 9: loop do
+i = 1
+loop do
+  puts i
+  i += 1
+  break if i > 5
+end
+# Demonstrates a loop do construct
+//////////////////////////////////////////////////////////////////
+
+# Example 10: each Iterator
+[1, 2, 3, 4, 5].each do |num|
+  puts num
+end
+# Demonstrates an each iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 11: times Iterator
+5.times do |i|
+  puts i
+end
+# Demonstrates a times iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 12: map Iterator
+squares = [1, 2, 3, 4, 5].map { |num| num * num }
+puts squares.join(", ")
+# Demonstrates a map iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 13: select Iterator
+evens = [1, 2, 3, 4, 5, 6].select { |num| num.even? }
+puts evens.join(", ")
+# Demonstrates a select iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 14: reject Iterator
+odds = [1, 2, 3, 4, 5, 6].reject { |num| num.even? }
+puts odds.join(", ")
+# Demonstrates a reject iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 15: reduce Iterator
+sum = [1, 2, 3, 4, 5].reduce(0) { |acc, num| acc + num }
+puts sum
+# Demonstrates a reduce iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 16: break Statement
+i = 1
+while i <= 10
+  break if i == 6
+  puts i
+  i += 1
+end
+# Demonstrates a break statement
+//////////////////////////////////////////////////////////////////
+
+# Example 17: next Statement
+for i in 1..5
+  next if i == 3
+  puts i
+end
+# Demonstrates a next statement
+//////////////////////////////////////////////////////////////////
+
+# Example 18: redo Statement
+i = 1
+while i <= 3
+  puts i
+  i += 1
+  redo if i == 4
+end
+# Demonstrates a redo statement
+//////////////////////////////////////////////////////////////////
+
+# Example 19: retry Statement (only in begin-rescue block)
+attempts = 0
+begin
+  attempts += 1
+  raise if attempts < 3
+  puts "Success on attempt #{attempts}"
+rescue
+  puts "Retry attempt #{attempts}"
+  retry if attempts < 3
+end
+# Demonstrates a retry statement
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Inline if Modifier
+x = 10
+puts "x is greater than 5" if x > 5
+# Demonstrates an inline if modifier
+//////////////////////////////////////////////////////////////////
+
+# Example 1: Nested if-else Statement
+x = 7
+if x > 5
+  if x < 10
+    puts "x is between 6 and 9"
+  else
+    puts "x is 10 or greater"
+  end
+else
+  puts "x is 5 or less"
+end
+# Demonstrates a nested if-else statement
+//////////////////////////////////////////////////////////////////
+
+# Example 2: unless-else Statement
+x = 3
+unless x > 5
+  puts "x is 5 or less"
+else
+  puts "x is greater than 5"
+end
+# Demonstrates an unless-else statement
+//////////////////////////////////////////////////////////////////
+
+# Example 3: case-when-else Statement
+day = "Saturday"
+case day
+when "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+  puts "It's a weekday"
+when "Saturday", "Sunday"
+  puts "It's the weekend"
+else
+  puts "Invalid day"
+end
+# Demonstrates a case-when-else statement
+//////////////////////////////////////////////////////////////////
+
+# Example 4: while Loop with Break
+i = 1
+while i <= 10
+  break if i == 7
+  puts i
+  i += 1
+end
+# Demonstrates a while loop with break
+//////////////////////////////////////////////////////////////////
+
+# Example 5: until Loop with Next
+i = 1
+until i > 5
+  i += 1
+  next if i == 3
+  puts i
+end
+# Demonstrates an until loop with next
+//////////////////////////////////////////////////////////////////
+
+# Example 6: for Loop with Step
+for i in (1..10).step(2)
+  puts i
+end
+# Demonstrates a for loop with step
+//////////////////////////////////////////////////////////////////
+
+# Example 7: each_with_index Iterator
+["a", "b", "c"].each_with_index do |letter, index|
+  puts "#{index}: #{letter}"
+end
+# Demonstrates an each_with_index iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 8: upto Iterator
+1.upto(5) do |i|
+  puts i
+end
+# Demonstrates an upto iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 9: downto Iterator
+5.downto(1) do |i|
+  puts i
+end
+# Demonstrates a downto iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 10: while Loop with redo
+i = 1
+while i <= 3
+  puts i
+  i += 1
+  redo if i == 4
+end
+# Demonstrates a while loop with redo
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Infinite Loop with Break
+i = 1
+loop do
+  puts i
+  i += 1
+  break if i > 5
+end
+# Demonstrates an infinite loop with break
+//////////////////////////////////////////////////////////////////
+
+# Example 12: until Modifier
+i = 10
+begin
+  puts i
+  i -= 1
+end until i < 5
+# Demonstrates an until modifier
+//////////////////////////////////////////////////////////////////
+
+# Example 13: if Modifier
+x = 10
+puts "x is even" if x.even?
+# Demonstrates an if modifier
+//////////////////////////////////////////////////////////////////
+
+# Example 14: unless Modifier
+x = 10
+puts "x is not zero" unless x.zero?
+# Demonstrates an unless modifier
+//////////////////////////////////////////////////////////////////
+
+# Example 15: Inline if-else Modifier
+x = 3
+puts x > 5 ? "x is greater than 5" : "x is 5 or less"
+# Demonstrates an inline if-else modifier
+//////////////////////////////////////////////////////////////////
+
+# Example 16: break in each Iterator
+[1, 2, 3, 4, 5].each do |num|
+  break if num == 3
+  puts num
+end
+# Demonstrates break in an each iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 17: next in each Iterator
+[1, 2, 3, 4, 5].each do |num|
+  next if num == 3
+  puts num
+end
+# Demonstrates next in an each iterator
+//////////////////////////////////////////////////////////////////
+
+# Example 18: for Loop with Array
+array = [1, 2, 3, 4, 5]
+for num in array
+  puts num
+end
+# Demonstrates a for loop with array
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Nested Loops
+for i in 1..3
+  for j in 1..3
+    puts "i: #{i}, j: #{j}"
+  end
+end
+# Demonstrates nested loops
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Times Loop with Conditional
+10.times do |i|
+  if i % 2 == 0
+    puts "Even: #{i}"
+  else
+    puts "Odd: #{i}"
+  end
+end
+# Demonstrates times loop with conditional
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+ruby method ans functions 
+///////////////////////////////////////////////////////
+
+
+
+# Example 1: Simple Method Definition
+def greet
+  puts "Hello, world!"
+end
+greet
+# Output: Hello, world!
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Method with Parameters
+def greet(name)
+  puts "Hello, #{name}!"
+end
+greet("Alice")
+# Output: Hello, Alice!
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Method with Default Parameters
+def greet(name = "world")
+  puts "Hello, #{name}!"
+end
+greet
+greet("Bob")
+# Output: Hello, world!
+# Output: Hello, Bob!
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Method with Return Value
+def add(a, b)
+  a + b
+end
+puts add(2, 3)
+# Output: 5
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Method with Multiple Return Values
+def divide(a, b)
+  quotient = a / b
+  remainder = a % b
+  return quotient, remainder
+end
+q, r = divide(10, 3)
+puts "Quotient: #{q}, Remainder: #{r}"
+# Output: Quotient: 3, Remainder: 1
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Method with Variable Number of Arguments
+def sum(*numbers)
+  numbers.reduce(0, :+)
+end
+puts sum(1, 2, 3)
+puts sum(4, 5, 6, 7)
+# Output: 6
+# Output: 22
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Method with Block
+def greet(name)
+  yield(name) if block_given?
+end
+greet("Charlie") { |n| puts "Hello, #{n}!" }
+# Output: Hello, Charlie!
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Method with Block and Default Block
+def greet(name)
+  if block_given?
+    yield(name)
+  else
+    puts "Hello, #{name}!"
+  end
+end
+greet("Dave")
+greet("Eve") { |n| puts "Hi, #{n}!" }
+# Output: Hello, Dave!
+# Output: Hi, Eve!
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Method with &block Argument
+def greet(name, &block)
+  block.call(name)
+end
+greet("Frank") { |n| puts "Hello, #{n}!" }
+# Output: Hello, Frank!
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Using Procs
+greet = Proc.new { |name| puts "Hello, #{name}!" }
+greet.call("Grace")
+# Output: Hello, Grace!
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Using Lambdas
+greet = ->(name) { puts "Hello, #{name}!" }
+greet.call("Hannah")
+# Output: Hello, Hannah!
+//////////////////////////////////////////////////////////////////
+
+# Example 12: Method with Keyword Arguments
+def greet(name:, greeting: "Hello")
+  puts "#{greeting}, #{name}!"
+end
+greet(name: "Ivy")
+greet(name: "Jack", greeting: "Hi")
+# Output: Hello, Ivy!
+# Output: Hi, Jack!
+//////////////////////////////////////////////////////////////////
+
+# Example 13: Recursive Method
+def factorial(n)
+  return 1 if n == 0
+  n * factorial(n - 1)
+end
+puts factorial(5)
+# Output: 120
+//////////////////////////////////////////////////////////////////
+
+# Example 14: Method Aliasing
+def greet(name)
+  puts "Hello, #{name}!"
+end
+alias say_hello greet
+say_hello("Kate")
+# Output: Hello, Kate!
+//////////////////////////////////////////////////////////////////
+
+# Example 15: Singleton Method
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+person = Person.new("Leo")
+def person.greet
+  puts "Hello, #{@name}!"
+end
+person.greet
+# Output: Hello, Leo!
+//////////////////////////////////////////////////////////////////
+
+# Example 16: Class Method
+class Person
+  def self.greet
+    puts "Hello from the class!"
+  end
+end
+Person.greet
+# Output: Hello from the class!
+//////////////////////////////////////////////////////////////////
+
+# Example 17: Private Method
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def greet
+    puts "Hello, #{@name}!"
+    secret
+  end
+
+  private
+
+  def secret
+    puts "This is a private method."
+  end
+end
+person = Person.new("Mia")
+person.greet
+# Output: Hello, Mia!
+# Output: This is a private method.
+//////////////////////////////////////////////////////////////////
+
+# Example 18: Protected Method
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def greet(other)
+    if other.is_a?(Person)
+      puts "#{@name} greets #{other.name}"
+    else
+      puts "Cannot greet non-person"
+    end
+  end
+
+  protected
+
+  def name
+    @name
+  end
+end
+alice = Person.new("Alice")
+bob = Person.new("Bob")
+alice.greet(bob)
+# Output: Alice greets Bob
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Method Missing
+class Person
+  def method_missing(method_name, *args)
+    puts "You tried to call #{method_name} with #{args.join(', ')}"
+  end
+end
+person = Person.new
+person.unknown_method("arg1", "arg2")
+# Output: You tried to call unknown_method with arg1, arg2
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Define Method Dynamically
+class Person
+  def self.create_method(name)
+    define_method(name) do
+      puts "Called method #{name}"
+    end
+  end
+end
+Person.create_method(:greet)
+person = Person.new
+person.greet
+# Output: Called method greet
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+ruby exception handling : syntax
+///////////////////////////////////////////////////////////////
+
+# Example 1: Basic Exception Handling
+begin
+  1 / 0
+rescue ZeroDivisionError
+  puts "Cannot divide by zero"
+end
+# Output: Cannot divide by zero
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Rescue Multiple Exceptions
+begin
+  raise ArgumentError, "Invalid argument"
+rescue ZeroDivisionError, ArgumentError => e
+  puts "Error: #{e.message}"
+end
+# Output: Error: Invalid argument
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Ensure Block
+begin
+  1 / 0
+rescue ZeroDivisionError
+  puts "Cannot divide by zero"
+ensure
+  puts "This will always run"
+end
+# Output: Cannot divide by zero
+# Output: This will always run
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Retry Block
+attempts = 0
+begin
+  attempts += 1
+  raise "Error" if attempts < 3
+  puts "Success on attempt #{attempts}"
+rescue
+  puts "Retrying... (attempt #{attempts})"
+  retry if attempts < 3
+end
+# Output: Retrying... (attempt 1)
+# Output: Retrying... (attempt 2)
+# Output: Success on attempt 3
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Custom Exception
+class MyCustomError < StandardError; end
+begin
+  raise MyCustomError, "Something went wrong"
+rescue MyCustomError => e
+  puts "Caught custom error: #{e.message}"
+end
+# Output: Caught custom error: Something went wrong
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Nested Exception Handling
+begin
+  begin
+    1 / 0
+  rescue ZeroDivisionError
+    puts "Inner rescue: Cannot divide by zero"
+    raise
+  end
+rescue ZeroDivisionError
+  puts "Outer rescue: Caught the error again"
+end
+# Output: Inner rescue: Cannot divide by zero
+# Output: Outer rescue: Caught the error again
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Inline Rescue
+result = (1 / 0 rescue "Division by zero error")
+puts result
+# Output: Division by zero error
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Raising Exceptions
+def divide(a, b)
+  raise ArgumentError, "Argument b cannot be zero" if b == 0
+  a / b
+end
+begin
+  puts divide(10, 0)
+rescue ArgumentError => e
+  puts "Error: #{e.message}"
+end
+# Output: Error: Argument b cannot be zero
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Else Block
+begin
+  result = 1 / 1
+rescue ZeroDivisionError
+  puts "Cannot divide by zero"
+else
+  puts "Result is #{result}"
+end
+# Output: Result is 1
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Using `raise` to Reraise Exception
+begin
+  raise "Initial error"
+rescue => e
+  puts "Caught error: #{e.message}"
+  raise
+rescue
+  puts "Reraised error"
+end
+# Output: Caught error: Initial error
+# Output: Reraised error
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+ruby arrays, hashes, range 
+
+///////////////////////////////////////////////////////////////////////
+# Example 1: Creating an Array
+fruits = ["Apple", "Banana", "Cherry"]
+puts fruits.join(", ")
+# Output: Apple, Banana, Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Accessing Array Elements
+puts fruits[0]  # Output: Apple
+puts fruits[1]  # Output: Banana
+puts fruits[2]  # Output: Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Modifying Array Elements
+fruits[1] = "Blueberry"
+puts fruits.join(", ")  # Output: Apple, Blueberry, Cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Adding Elements to an Array
+fruits << "Date"
+puts fruits.join(", ")  # Output: Apple, Blueberry, Cherry, Date
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Removing Elements from an Array
+fruits.delete("Cherry")
+puts fruits.join(", ")  # Output: Apple, Blueberry, Date
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Iterating Over an Array
+fruits.each { |fruit| puts fruit }
+# Output:
+# Apple
+# Blueberry
+# Date
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Checking if an Element Exists
+puts fruits.include?("Banana")  # Output: false
+puts fruits.include?("Date")    # Output: true
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Sorting an Array
+numbers = [3, 1, 4, 1, 5]
+sorted_numbers = numbers.sort
+puts sorted_numbers.join(", ")  # Output: 1, 1, 3, 4, 5
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Reversing an Array
+reversed_numbers = numbers.reverse
+puts reversed_numbers.join(", ")  # Output: 5, 1, 4, 1, 3
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Array Length
+puts fruits.length  # Output: 3
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Combining Arrays
+array1 = [1, 2]
+array2 = [3, 4]
+combined_array = array1 + array2
+puts combined_array.join(", ")  # Output: 1, 2, 3, 4
+//////////////////////////////////////////////////////////////////
+
+# Example 12: Subtracting Arrays
+array1 = [1, 2, 3]
+array2 = [2, 3, 4]
+difference_array = array1 - array2
+puts difference_array.join(", ")  # Output: 1
+//////////////////////////////////////////////////////////////////
+
+# Example 13: Array Intersection
+intersection_array = array1 & array2
+puts intersection_array.join(", ")  # Output: 2, 3
+//////////////////////////////////////////////////////////////////
+
+# Example 14: Array Union
+union_array = array1 | array2
+puts union_array.join(", ")  # Output: 1, 2, 3, 4
+//////////////////////////////////////////////////////////////////
+
+# Example 15: Flattening an Array
+nested_array = [1, [2, 3], [4, [5, 6]]]
+flattened_array = nested_array.flatten
+puts flattened_array.join(", ")  # Output: 1, 2, 3, 4, 5, 6
+//////////////////////////////////////////////////////////////////
+
+# Example 16: Compacting an Array
+array_with_nils = [1, nil, 2, nil, 3]
+compacted_array = array_with_nils.compact
+puts compacted_array.join(", ")  # Output: 1, 2, 3
+//////////////////////////////////////////////////////////////////
+
+# Example 17: Mapping an Array
+squares = numbers.map { |n| n * n }
+puts squares.join(", ")  # Output: 9, 1, 16, 1, 25
+//////////////////////////////////////////////////////////////////
+
+# Example 18: Selecting Elements from an Array
+evens = numbers.select { |n| n.even? }
+puts evens.join(", ")  # Output: 4
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Rejecting Elements from an Array
+odds = numbers.reject { |n| n.even? }
+puts odds.join(", ")  # Output: 3, 1, 1, 5
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Reducing an Array
+sum = numbers.reduce(0) { |acc, n| acc + n }
+puts sum  # Output: 14
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+ruby reguar expressions 
+///////////////////////////////////////////////////////
+
+# Example 1: Simple Match
+text = "The quick brown fox"
+puts text =~ /quick/ ? "Match found" : "No match"
+# Output: Match found
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Using Match Data
+if text =~ /(quick)/
+  puts "Match data: #{$1}"
+end
+# Output: Match data: quick
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Global Match
+text = "The quick brown fox jumps over the lazy dog"
+matches = text.scan(/\b\w{3}\b/)
+puts matches.join(", ")
+# Output: The, fox, the, dog
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Substitution
+text = "The quick brown fox"
+new_text = text.sub(/quick/, "slow")
+puts new_text
+# Output: The slow brown fox
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Global Substitution
+text = "The quick quick brown fox"
+new_text = text.gsub(/quick/, "slow")
+puts new_text
+# Output: The slow slow brown fox
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Case-Insensitive Match
+text = "The Quick Brown Fox"
+puts text =~ /quick/i ? "Match found" : "No match"
+# Output: Match found
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Match at the Start
+text = "The quick brown fox"
+puts text =~ /^The/ ? "Starts with 'The'" : "Does not start with 'The'"
+# Output: Starts with 'The'
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Match at the End
+text = "The quick brown fox"
+puts text =~ /fox$/ ? "Ends with 'fox'" : "Does not end with 'fox'"
+# Output: Ends with 'fox'
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Non-Greedy Match
+text = "The quick brown fox jumps over the lazy dog"
+puts text[/(quick.*?jumps)/]
+# Output: quick brown fox jumps
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Split Using Regex
+text = "The quick brown fox"
+words = text.split(/\s+/)
+puts words.join(", ")
+# Output: The, quick, brown, fox
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+ruby missellanious : syntax
+/////////////////////////////////////////////////////////////
+
+
+# Example 1: Require a Library
+require 'date'
+puts Date.today
+# Output: <Today's date>
+//////////////////////////////////////////////////////////////////
+
+# Example 2: Require a Relative File
+# Assuming `my_script.rb` exists in the same directory
+# require_relative 'my_script'
+# puts MyScript.greet
+# Output: depends on the content of `my_script.rb`
+//////////////////////////////////////////////////////////////////
+
+# Example 3: Include a Module
+module Greetings
+  def greet
+    puts "Hello!"
+  end
+end
+
+class Person
+  include Greetings
+end
+
+Person.new.greet
+# Output: Hello!
+//////////////////////////////////////////////////////////////////
+
+# Example 4: Extend a Module
+module Farewell
+  def goodbye
+    puts "Goodbye!"
+  end
+end
+
+class Person
+  extend Farewell
+end
+
+Person.goodbye
+# Output: Goodbye!
+//////////////////////////////////////////////////////////////////
+
+# Example 5: Singleton Methods
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+person = Person.new("Alice")
+def person.greet
+  puts "Hello, #{@name}!"
+end
+
+person.greet
+# Output: Hello, Alice!
+//////////////////////////////////////////////////////////////////
+
+# Example 6: Alias Methods
+class Calculator
+  def add(a, b)
+    a + b
+  end
+  alias plus add
+end
+
+calc = Calculator.new
+puts calc.plus(2, 3)
+# Output: 5
+//////////////////////////////////////////////////////////////////
+
+# Example 7: Undefine Methods
+class Calculator
+  def add(a, b)
+    a + b
+  end
+  undef add
+end
+
+calc = Calculator.new
+# puts calc.add(2, 3) # This will raise an error
+# Output: undefined method `add` for Calculator
+//////////////////////////////////////////////////////////////////
+
+# Example 8: Splat Operator in Method Arguments
+def list(*items)
+  items.each { |item| puts item }
+end
+list("apple", "banana", "cherry")
+# Output: apple, banana, cherry
+//////////////////////////////////////////////////////////////////
+
+# Example 9: Double Splat Operator in Method Arguments
+def info(**details)
+  details.each { |key, value| puts "#{key}: #{value}" }
+end
+info(name: "Alice", age: 30, city: "New York")
+# Output: name: Alice, age: 30, city: New York
+//////////////////////////////////////////////////////////////////
+
+# Example 10: Method Missing
+class Person
+  def method_missing(method_name, *args)
+    puts "You called #{method_name} with #{args.join(', ')}"
+  end
+end
+
+person = Person.new
+person.unknown_method("arg1", "arg2")
+# Output: You called unknown_method with arg1, arg2
+//////////////////////////////////////////////////////////////////
+
+# Example 11: Define Method Dynamically
+class Person
+  def self.create_method(name)
+    define_method(name) do
+      puts "Called method #{name}"
+    end
+  end
+end
+
+Person.create_method(:greet)
+person = Person.new
+person.greet
+# Output: Called method greet
+//////////////////////////////////////////////////////////////////
+
+# Example 12: Open Classes (Monkey Patching)
+class String
+  def shout
+    upcase + "!!!"
+  end
+end
+
+puts "hello".shout
+# Output: HELLO!!!
+//////////////////////////////////////////////////////////////////
+
+# Example 13: Metaprogramming with class_eval
+class Person; end
+Person.class_eval do
+  def greet
+    puts "Hello!"
+  end
+end
+
+Person.new.greet
+# Output: Hello!
+//////////////////////////////////////////////////////////////////
+
+# Example 14: Metaprogramming with instance_eval
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+person = Person.new("Alice")
+person.instance_eval do
+  def greet
+    puts "Hello, #{@name}!"
+  end
+end
+
+person.greet
+# Output: Hello, Alice!
+//////////////////////////////////////////////////////////////////
+
+# Example 15: File Reading
+File.open("example.txt", "r") do |file|
+  puts file.read
+end
+# Output: Content of example.txt
+//////////////////////////////////////////////////////////////////
+
+# Example 16: File Writing
+File.open("example.txt", "w") do |file|
+  file.puts "Hello, file!"
+end
+# Output: Content of example.txt will be "Hello, file!"
+//////////////////////////////////////////////////////////////////
+
+# Example 17: String Interpolation
+name = "Alice"
+puts "Hello, #{name}!"
+# Output: Hello, Alice!
+//////////////////////////////////////////////////////////////////
+
+# Example 18: Here Document
+str = <<~HEREDOC
+  This is a here document.
+  It spans multiple lines.
+HEREDOC
+
+puts str
+# Output:
+# This is a here document.
+# It spans multiple lines.
+//////////////////////////////////////////////////////////////////
+
+# Example 19: Regular Expressions with %r
+regex = %r{(quick|brown|fox)}
+text = "The quick brown fox"
+puts text.scan(regex).join(", ")
+# Output: quick, brown, fox
+//////////////////////////////////////////////////////////////////
+
+# Example 20: Ruby Debugger (Pry)
+# require 'pry'
+# binding.pry
+# puts "This will pause execution and open a REPL"
+# Output: (REPL session)
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
